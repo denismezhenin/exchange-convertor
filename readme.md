@@ -1,8 +1,8 @@
 # Currency Convertor
 
-> Using fixer.io to get currency rate.
-> Because of free account all currency exchanges calculated through the ratio to the euro
-> Vanilla HTML/CSS/Javascript
+ * Using fixer.io to get currency rate.
+*  Because of free account all currency exchanges calculated through the ratio to the euro
+*  Vanilla HTML/CSS/Javascript
 
 ## Installation
 
