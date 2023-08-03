@@ -55,3 +55,8 @@ toCurrencyTextElement.textContent = currencies[currencyTo.value]
 }
 
 
+// check how to improve
+// ask about a plan from chat
+// add readme
+// add nodemon
+// deploy
