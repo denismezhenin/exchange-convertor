@@ -15,12 +15,19 @@
   <div class="form__wrapper">
     <form class="currencyExchange form">
       <h2 class="form__tittle">Make fast currency conversion</h2>
+      <div class="form__currency__ratio-wrapper">
+        <div class="form__currency__text">
+          <span class="currency__text__amount-from">1</span>
+          <span class="currency__text__name-from"></span>
+        </div>
+        <span>Equals</span>
+        <div class="form__currency__text">
+          <span class="currency__text__amount-to"></span>
+          <span class="currency__text__name-to"></span>
+        </div>
+      </div>
       <div class="currency__wrapper">
         <div class="form__currency__wrapper">
-          <p class="currency__text">
-            <span class="currency__text__name-from"></span>
-            <span class="currency__text__amount-from"></span>
-          </p>
           <div class="form__fromCurrency form__currency__block">
             <input type="number" class="form__fromCurrency__input form__input" data-type="from" step="0.01" min="0">      
             <select class="form__fromCurrency__select form__select">
@@ -29,10 +36,6 @@
           </div>
         </div>
         <div class="form__currency__wrapper">
-          <p class="currency__text">
-            <span class="currency__text__name-to"></span>
-            <span class="currency__text__amount-to"></span>
-          </p>
           <div class="toCurrency form__currency__block">
             <input type="number" class="form__toCurrency__input form__input" id="amount" step="0.01" min="0" data-type="to">      
             <select class="form__toCurrency__select form__select">

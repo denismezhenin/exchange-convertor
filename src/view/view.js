@@ -1,8 +1,15 @@
 import { access_key, API, endpoint } from "../constants/constants.js"
 import { currencies } from "../constants/currencies.js"
+import { currencyFrom, currencyTo } from "../controller/controllers.js"
+import { state } from "../state/state.js"
 
 const formSelects = document.querySelectorAll('.form__select')
 const errorElement = document.querySelector('.form__error-message')
+const fromCurrencyTextElement = document.querySelector('.currency__text__name-from')
+const toCurrencyTextElement = document.querySelector('.currency__text__name-to')
+const fromCurrencyAmountElement = document.querySelector('.currency__text__amount-from')
+const toCurrencyAmountElement = document.querySelector('.currency__text__amount-to')
+const currencyRatioWrapper = document.querySelector('.form__currency__ratio-wrapper')
 
 export const setView = async () => {
   try {
@@ -35,3 +42,16 @@ export const showError = (message) => {
   errorElement.innerText = message
   errorElement.style.visibility = "visible"
 }
+
+export const hideError = () => {
+  errorElement.style.visibility = "hidden"
+}
+
+export const displayExchangeRatio = () => {
+toCurrencyAmountElement.textContent = state.ratio
+currencyRatioWrapper.style.visibility = "visible"
+fromCurrencyTextElement.textContent = currencies[currencyFrom.value]
+toCurrencyTextElement.textContent = currencies[currencyTo.value]
+}
+
+

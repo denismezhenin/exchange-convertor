@@ -1,5 +1,5 @@
 import { access_key, API, endpoint } from "../constants/constants.js"
-import { getRatesForSelectedCurrencies, setCalculatedExchangeResult } from "../controller/controller.js"
+import { getRatesForSelectedCurrencies, setCalculatedExchangeResult } from "../controller/controllers.js"
 import { setView } from "../view/view.js"
 
 export const app = async () => {
