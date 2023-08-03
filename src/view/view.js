@@ -29,7 +29,7 @@ const addCurrencyOptions = (currenciesObj) =>  {
     if (currencies[el]) {
       const option = document.createElement('option')
       option.value = el
-      option.innerText = currencies[el]
+      option.textContent = currencies[el]
       fragment.append(option)
     } 
   })
@@ -39,7 +39,7 @@ const addCurrencyOptions = (currenciesObj) =>  {
 }
 
 export const showError = (message) => {
-  errorElement.innerText = message
+  errorElement.textContent = message
   errorElement.style.visibility = "visible"
 }
 
@@ -54,9 +54,3 @@ fromCurrencyTextElement.textContent = currencies[currencyFrom.value]
 toCurrencyTextElement.textContent = currencies[currencyTo.value]
 }
 
-
-// check how to improve
-// ask about a plan from chat
-// add readme
-// add nodemon
-// deploy

@@ -1,6 +1,6 @@
 import { access_key, API, endpoint } from "../constants/constants.js"
 import { state } from "../state/state.js"
-import { displayExchangeRatio, hideError } from "../view/view.js"
+import { displayExchangeRatio, hideError, showError } from "../view/view.js"
 
 export const currencyFrom = document.querySelector('.form__fromCurrency__select')
 export const currencyTo = document.querySelector('.form__toCurrency__select')
@@ -29,7 +29,6 @@ export const getRatesForSelectedCurrencies = async () => {
 export const setCalculatedExchangeResult = (type) => {
   state.inputType = type
   if (state.fromCurrencyRate && state.toCurrencyRate) { 
-    
     type === "from" ? setToCurrency() : setFromCurrency()  
   }
 }
@@ -43,3 +42,4 @@ const setFromCurrency = () => {
     const result = (currencyToInput.value * (state.fromCurrencyRate / state.toCurrencyRate)).toFixed(2)
     currencyFromInput.value = result
 }
+
